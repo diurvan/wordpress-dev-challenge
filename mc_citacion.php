@@ -10,14 +10,14 @@
  * @package Plugin_Name
  *
  * @wordpress-plugin
- * Plugin Name:     Plugin Name
- * Description:     This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin Name:     MC Citacion
+ * Description:     Agregar citas a los artículos que ya existen
  * Version:         0.0.1
- * Author:          Your Name
+ * Author:          diurvan
  * Author URI:      https://www.example.com
  * License:         GPL-2.0+
  * License URI:     http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:     plugin-name
+ * Text Domain:     mc-citacion
  * Domain Path:     /lang
  */
 
@@ -25,18 +25,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Direct access not permitted.' );
 }
 
-if ( ! class_exists( 'plugin_name' ) ) {
+if ( ! class_exists( 'mc_citacion' ) ) {
 
 	/*
-	 * main plugin_name class
+	 * main mc_citacion class
 	 *
-	 * @class plugin_name
+	 * @class mc_citacion
 	 * @since 0.0.1
 	 */
-	class plugin_name {
+	class mc_citacion {
 
 		/*
-		 * plugin_name plugin version
+		 * mc_citacion plugin version
 		 *
 		 * @var string
 		 */
@@ -45,17 +45,17 @@ if ( ! class_exists( 'plugin_name' ) ) {
 		/**
 		 * The single instance of the class.
 		 *
-		 * @var plugin_name
+		 * @var mc_citacion
 		 * @since 0.0.1
 		 */
 		protected static $instance = null;
 
 		/**
-		 * Main plugin_name instance.
+		 * Main mc_citacion instance.
 		 *
 		 * @since 0.0.1
 		 * @static
-		 * @return plugin_name - main instance.
+		 * @return mc_citacion - main instance.
 		 */
 		public static function instance() {
 			if ( is_null( self::$instance ) ) {
@@ -65,7 +65,7 @@ if ( ! class_exists( 'plugin_name' ) ) {
 		}
 
 		/**
-		 * plugin_name class constructor.
+		 * mc_citacion class constructor.
 		 */
 		public function __construct() {
 			$this->load_plugin_textdomain();
@@ -75,16 +75,13 @@ if ( ! class_exists( 'plugin_name' ) ) {
 		}
 
 		public function load_plugin_textdomain() {
-			load_plugin_textdomain( 'plugin-name', false, basename( dirname( __FILE__ ) ) . '/lang/' );
+			load_plugin_textdomain( 'wc-citacion', false, basename( dirname( __FILE__ ) ) . '/lang/' );
 		}
 
 		/**
 		 * Include required core files
 		 */
 		public function includes() {
-            // Example
-			require_once __DIR__ . '/includes/loader.php';
-
 			// Load custom functions and hooks
 			require_once __DIR__ . '/includes/includes.php';
 		}
@@ -103,14 +100,14 @@ if ( ! class_exists( 'plugin_name' ) ) {
 		 * Define plugin_name constants
 		 */
 		private function define_constants() {
-			define( 'PLUGIN_NAME_PLUGIN_FILE', __FILE__ );
-			define( 'PLUGIN_NAME_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
-			define( 'PLUGIN_NAME_VERSION', $this->version );
-			define( 'PLUGIN_NAME_PATH', $this->plugin_path() );
+			define( 'MC_CITACION_PLUGIN_FILE', __FILE__ );
+			define( 'MC_CITACION_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+			define( 'MC_CITACION_VERSION', $this->version );
+			define( 'MC_CITACION_PATH', $this->plugin_path() );
 		}
 
 		/**
-		 * Define plugin_name actions
+		 * Define mc_citacion actions
 		 */
 		public function define_actions() {
 			//
@@ -124,5 +121,5 @@ if ( ! class_exists( 'plugin_name' ) ) {
 		}
 	}
 
-	$plugin_name = new plugin_name();
+	$mc_citacion = new mc_citacion();
 }

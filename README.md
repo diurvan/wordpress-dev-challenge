@@ -22,3 +22,12 @@
 1. Siete días (7 días) a partir del correo electrónico de envío del Desafío Tech. La fecha exacta está en el correo electrónico.
 2. Notificar en el correo electrónico la finalización y enviar solamente la url del repositorio para evaluación.
 3. Utilizar siempre en el correo electrónico la opción "Responder a todos".
+
+## MIS COMENTARIOS
+Se resolvieron los 2 ejercicios. Únicamente tener en cuenta lo siguiente:
+Ejercicio 1
+- Incluir el shortcode [mc-citacion] para ver las citaciones de cada entrada
+Ejercicio 2
+- No se hizo la parte de Cron. Pero podría terminarse este ejercicio usando wp_schedule_event
+- En lugar de eso, se debe ubicar el shortcode [mc-citacion-button-url] en una página o entrada.
+- Darle click en el botón "PROCESS CONTENTS" y al final aparecerá el texto "Resultado: [Número de items procesados]"
